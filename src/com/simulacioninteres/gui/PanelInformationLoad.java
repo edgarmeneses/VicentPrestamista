@@ -106,7 +106,7 @@ public class PanelInformationLoad extends JPanel{
 					txtInteresRate.setEditable(false);
 					txtLoadPeriod.setEditable(false);
 					txtSeedMoney.setEditable(false);
-					txtamount.setEditable(true);
+					txtamount.setEditable(false);
 					edit.setText("Editar");
 					ImageIcon icon = new ImageIcon(this.getClass().getResource("/images/edit.png"));
 					edit.setIcon(icon);
@@ -120,10 +120,10 @@ public class PanelInformationLoad extends JPanel{
 	
 	private void changeInformation(){
 		
-		factorLoan.setSeedMoney(Long.valueOf(txtSeedMoney.getText()));
+		factorLoan.setSeedMoney(Double.valueOf(txtSeedMoney.getText()));
 		factorLoan.setInteresRate(Double.valueOf(txtInteresRate.getText()));
 		factorLoan.setLoanPeriod(Integer.valueOf(txtLoadPeriod.getText()));
-		factorLoan.setMaxMoneyLoan(Long.valueOf(txtamount.getText()));
+		factorLoan.setMaxMoneyLoan(Double.valueOf(txtamount.getText()));
 		
 //		
 		txtSeedMoney.setText(factorLoan.getSeedMoney()+"");

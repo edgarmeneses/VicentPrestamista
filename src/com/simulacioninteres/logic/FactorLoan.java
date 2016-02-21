@@ -143,7 +143,7 @@ public class FactorLoan {
 	public double getSeedMoney() {
 		return seedMoney;
 	}
-	public void setSeedMoney(long seedMoney) {
+	public void setSeedMoney(double seedMoney) {
 		this.seedMoney = seedMoney;
 	}
 	public double getInteresRate() {
@@ -164,7 +164,7 @@ public class FactorLoan {
 	public double getMaxMoneyLoan() {
 		return minMoneyLoan;
 	}
-	public void setMaxMoneyLoan(long maxMoneyLoan) {
+	public void setMaxMoneyLoan(double maxMoneyLoan) {
 		this.minMoneyLoan = maxMoneyLoan;
 	}
 	public double getRaisedMoney() {
