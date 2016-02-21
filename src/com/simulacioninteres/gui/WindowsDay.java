@@ -7,16 +7,17 @@ import java.awt.event.MouseListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JDialog;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class WindowsDay extends JDialog{
+public class WindowsDay extends JFrame{
 	private JLabel lblTitle;
 	private JLabel back;
 	private WindowsMain windowsMain;
 	public WindowsDay(WindowsMain windowsMain) {
 		// TODO Auto-generated constructor stub
 		
-		super(windowsMain, true);
+//		super(windowsMain, true);
 		setSize(500, 600);
 		setLocationRelativeTo(null);
 		setLayout(null);

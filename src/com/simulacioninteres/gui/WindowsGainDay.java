@@ -7,18 +7,19 @@ import java.awt.event.MouseListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JDialog;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import com.simulacioninteres.logic.FactorLoan;
 
-public class WindowsGainDay extends JDialog{
+public class WindowsGainDay extends JFrame{
 	private JLabel lblTitle;
 	private JLabel back;
 	private WindowsMain windowsMain;
 	public WindowsGainDay(WindowsMain windowsMain) {
 		// TODO Auto-generated constructor stub
 		
-		super(windowsMain, true);
+//		super(windowsMain, true);
 		setSize(500, 600);
 		setLocationRelativeTo(null);
 		setLayout(null);
