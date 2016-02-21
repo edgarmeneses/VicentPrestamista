@@ -22,7 +22,7 @@ public class WindowsInformation extends JDialog{
 		setSize(500, 600);
 		setLocationRelativeTo(null);
 		setLayout(null);
-		setUndecorated(true);
+		setUndecorated(false);
 		this.windowsMain=windowsMain;
 		this.windowsMain.setVisible(false);
 		

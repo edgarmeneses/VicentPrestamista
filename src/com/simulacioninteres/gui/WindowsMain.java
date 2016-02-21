@@ -34,7 +34,7 @@ public class WindowsMain extends JFrame{
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(false);
-		setUndecorated(true);
+		setUndecorated(false);
 		setBackground(Color.WHITE);
 		this.factorLoan = factorLoan;
 		this.windowsMain=this;

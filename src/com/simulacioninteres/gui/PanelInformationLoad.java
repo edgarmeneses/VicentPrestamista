@@ -20,9 +20,11 @@ public class PanelInformationLoad extends JPanel{
 	private JLabel lblSeedMoney;
 	private JLabel lblInteresRate;
 	private JLabel lblLoadPeriod;
+	private JLabel lblamount;
 	private JTextField txtSeedMoney;
 	private JTextField txtInteresRate;
 	private JTextField txtLoadPeriod;
+	private JTextField txtamount;
 	private JLabel edit;
 	private FactorLoan factorLoan;
 	
@@ -30,11 +32,12 @@ public class PanelInformationLoad extends JPanel{
 		// TODO Auto-generated constructor stub
 		setLayout(new BorderLayout());
 		JPanel panelLabels = new JPanel();
-		panelLabels.setLayout(new GridLayout(3, 2));
+		panelLabels.setLayout(new GridLayout(4, 2));
 		this.factorLoan = factorLoan;
 		lblSeedMoney = new JLabel("Dinero inicial");
 		lblInteresRate =new JLabel("Tasa de interes");
 		lblLoadPeriod = new JLabel("Periodo Maximo de prestamo");
+		lblamount= new JLabel("Monto minimo de prestamo");
 		
 		txtSeedMoney = new JTextField(factorLoan.getSeedMoney()+"");
 		txtSeedMoney.setEditable(false);
@@ -42,6 +45,8 @@ public class PanelInformationLoad extends JPanel{
 		txtInteresRate.setEditable(false);
 		txtLoadPeriod = new JTextField(factorLoan.getLoanPeriod()+"");
 		txtLoadPeriod.setEditable(false);
+		txtamount=new JTextField(factorLoan.getMaxMoneyLoan()+"");
+		txtamount.setEditable(false);
 		
 		panelLabels.add(lblSeedMoney);
 		panelLabels.add(txtSeedMoney);
@@ -49,6 +54,8 @@ public class PanelInformationLoad extends JPanel{
 		panelLabels.add(txtInteresRate);
 		panelLabels.add(lblLoadPeriod);
 		panelLabels.add(txtLoadPeriod);
+		panelLabels.add(lblamount);
+		panelLabels.add(txtamount);
 		
 		add(panelLabels,BorderLayout.CENTER);
 		edit();
@@ -91,6 +98,7 @@ public class PanelInformationLoad extends JPanel{
 					txtInteresRate.setEditable(true);
 					txtLoadPeriod.setEditable(true);
 					txtSeedMoney.setEditable(true);
+					txtamount.setEditable(true);
 					edit.setText("Guardar");
 					ImageIcon icon = new ImageIcon(this.getClass().getResource("/images/save.png"));
 					edit.setIcon(icon);
@@ -98,6 +106,7 @@ public class PanelInformationLoad extends JPanel{
 					txtInteresRate.setEditable(false);
 					txtLoadPeriod.setEditable(false);
 					txtSeedMoney.setEditable(false);
+					txtamount.setEditable(true);
 					edit.setText("Editar");
 					ImageIcon icon = new ImageIcon(this.getClass().getResource("/images/edit.png"));
 					edit.setIcon(icon);
@@ -114,8 +123,11 @@ public class PanelInformationLoad extends JPanel{
 		factorLoan.setSeedMoney(Long.valueOf(txtSeedMoney.getText()));
 		factorLoan.setInteresRate(Double.valueOf(txtInteresRate.getText()));
 		factorLoan.setLoanPeriod(Integer.valueOf(txtLoadPeriod.getText()));
+		factorLoan.setMaxMoneyLoan(Long.valueOf(txtamount.getText()));
+		
 //		
 		txtSeedMoney.setText(factorLoan.getSeedMoney()+"");
+		txtamount.setText(factorLoan.getMaxMoneyLoan()+"");
 //		txtInteresRate.setText(factorLoan.getInteresRate()+"");
 //		txtLoadPeriod.setText(factorLoan.getLoanPeriod()+"");
 	}
