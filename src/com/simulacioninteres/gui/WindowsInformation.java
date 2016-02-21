@@ -24,6 +24,7 @@ public class WindowsInformation extends JFrame{
 		setLocationRelativeTo(null);
 		setLayout(null);
 //		setUndecorated(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.windowsMain=windowsMain;
 		this.windowsMain.setVisible(false);
 		

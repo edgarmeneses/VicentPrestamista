@@ -24,6 +24,7 @@ public class WindowsGainDay extends JFrame{
 		setLocationRelativeTo(null);
 		setLayout(null);
 		setUndecorated(false);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.windowsMain=windowsMain;
 		this.windowsMain.setVisible(false);
 		
