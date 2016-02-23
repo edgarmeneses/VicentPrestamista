@@ -38,7 +38,7 @@ public class WindowsMain extends JFrame{
 		setBackground(Color.WHITE);
 		this.factorLoan = factorLoan;
 		this.windowsMain=this;
-		ImageIcon icono = new ImageIcon(getClass().getResource("/images/icono.png")); 
+		ImageIcon icono = new ImageIcon(getClass().getResource("/images/money.png")); 
 	    this.setIconImage(icono.getImage());
 		
 		Font font = new Font("Arial", Font.BOLD, 30);
