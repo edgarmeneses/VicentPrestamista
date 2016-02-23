@@ -26,6 +26,9 @@ public class WindowsDay extends JFrame{
 		this.windowsMain=windowsMain;
 		this.windowsMain.setVisible(false);
 		
+		ImageIcon icono = new ImageIcon(getClass().getResource("/images/icono.png")); 
+	    this.setIconImage(icono.getImage());
+		
 		Font font = new Font("Arial", Font.BOLD, 30);
 		this.lblTitle = new JLabel("Calculador de ganancias");
 		this.lblTitle.setForeground(Color.BLUE);
